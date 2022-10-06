@@ -6,14 +6,9 @@ import java.util.List;
 
 public interface CarImpl {
 
-    default String carDetails(Car car) {
-        return "Car: "+car.getCarName()+" Brand: "+car.getCarBrand()
-                +"Made in: "+car.getYear() + numOfCars();
-    }
-
-    int numOfCars();
-
-    boolean deleteCar(Car car);
+//     String carDetails(Car car);
+//
+//    boolean deleteCar(Car car);
 
     List<Car> getAllCars();
 

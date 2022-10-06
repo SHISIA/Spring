@@ -18,19 +18,15 @@ public class CarService {
         this.carDao = carDao;
     }
 
-    public int numberOfCars(){
-        return carDao.numOfCars();
-    }
-
-    public String getCarDetails(Car car){
-        return carDao.carDetails(car);
-    }
-
+//    public String getDetails(Car car){
+//        return carDao.carDetails(car);
+//    }
+//
     public Car findCarByName(String name){
         return carDao.getCarByName(name);
     }
 
-    public List<Car> getAllCars(){
+    public List<Car> getCars(){
         return carDao.getAllCars();
     }
 
@@ -38,10 +34,10 @@ public class CarService {
         return carDao.getCarsByYear(year);
     }
 
-    public boolean deleteCar(Car car){
-        return carDao.deleteCar(car);
-    }
-
+//    public boolean deleteCar(Car car){
+//        return carDao.deleteCar(car);
+//    }
+//
     public String addCar(Car car){
         return carDao.addCar(car);
     }

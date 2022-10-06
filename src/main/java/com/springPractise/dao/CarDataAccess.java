@@ -9,19 +9,18 @@ import java.util.stream.Collectors;
 
 @Repository("CarRepo")
 public class CarDataAccess implements CarImpl{
+    private static List<Car> carList=new ArrayList<>();
 
-    List<Car> carList=new ArrayList<>();
-
-    @Override
-    public int numOfCars() {
-        return carList.size();
-    }
-
-    @Override
-    public boolean deleteCar(Car car) {
-        carList.remove(car);
-        return true;
-    }
+//    @Override
+//    public String carDetails(Car car) {
+//        return "Car: "+car.getCarName()+" Brand: "+car.getCarBrand()+" Year: "+car.getYear();
+//    }
+//
+//    @Override
+//    public boolean deleteCar(Car car) {
+//        carList.remove(car);
+//        return true;
+//    }
 
     @Override
     public List<Car> getAllCars() {

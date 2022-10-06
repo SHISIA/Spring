@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RequestMapping("api/v1/vehi")
 @RestController
 public class CarController {
 
@@ -17,21 +18,16 @@ public class CarController {
         this.service = service;
     }
 
-    @GetMapping
-    public int numOfCars(){
-        return service.numberOfCars();
-    }
-
     @PostMapping
     public void addCar(@RequestBody Car car){
          service.addCar(car);
     }
-
-    @DeleteMapping
-    public void deleteCar(Car car){
-        service.deleteCar(car);
-    }
-
+//
+//    @DeleteMapping
+//    public void deleteCar(@RequestBody Car car){
+//        service.deleteCar(car);
+//    }
+//
     @GetMapping(path = "{name}")
     public Car findCarByName(@PathVariable("name") String name){
         return service.findCarByName(name);
@@ -44,11 +40,11 @@ public class CarController {
 
     @GetMapping
     public List<Car> getAllCars(){
-        return service.getAllCars();
+        return service.getCars();
     }
 
-    @GetMapping
-    public String getCarDetails(@RequestBody Car car){
-        return service.getCarDetails(car);
-    }
+//    @GetMapping
+//    public String getCarDetails(@RequestBody Car car){
+//        return service.getDetails(car);
+//    }
 }
