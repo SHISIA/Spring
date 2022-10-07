@@ -18,11 +18,11 @@ public class CarService {
         this.carDao = carDao;
     }
 
-//    public String getDetails(Car car){
-//        return carDao.carDetails(car);
-//    }
-//
-    public Car findCarByName(String name){
+    public String getDetails(Car car){
+        return carDao.carDetails(car);
+    }
+
+    public List<Car> findCarByName(String name){
         return carDao.getCarByName(name);
     }
 
@@ -34,10 +34,10 @@ public class CarService {
         return carDao.getCarsByYear(year);
     }
 
-//    public boolean deleteCar(Car car){
-//        return carDao.deleteCar(car);
-//    }
-//
+    public boolean deleteCar(Car car){
+        return carDao.deleteCar(car);
+    }
+
     public String addCar(Car car){
         return carDao.addCar(car);
     }

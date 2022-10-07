@@ -6,13 +6,13 @@ import java.util.List;
 
 public interface CarImpl {
 
-//     String carDetails(Car car);
-//
-//    boolean deleteCar(Car car);
+     String carDetails(Car car);
+
+    boolean deleteCar(Car car);
 
     List<Car> getAllCars();
 
-    Car getCarByName(String carName);
+    List<Car> getCarByName(String carName);
 
     List<Car> getCarsByYear(String year);
 

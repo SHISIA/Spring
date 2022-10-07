@@ -18,33 +18,34 @@ public class CarController {
         this.service = service;
     }
 
-    @PostMapping
+    //working well
+    @PostMapping("/add")
     public void addCar(@RequestBody Car car){
          service.addCar(car);
     }
-//
-//    @DeleteMapping
-//    public void deleteCar(@RequestBody Car car){
-//        service.deleteCar(car);
-//    }
-//
-    @GetMapping(path = "{name}")
-    public Car findCarByName(@PathVariable("name") String name){
-        return service.findCarByName(name);
+
+    @DeleteMapping("/delete")
+    public void deleteCar(@RequestBody Car car){
+        service.deleteCar(car);
     }
 
-    @GetMapping(path = "{year}")
+    @GetMapping("/carName/")
+    public List<Car> findCarByName(@PathVariable("carName") String carName){
+        return service.findCarByName(carName);
+    }
+
+    @GetMapping("/carYear/")
     public List<Car> findCarByYear(@PathVariable("year") String year){
         return service.findCarByYear(year);
     }
 
-    @GetMapping
+    @GetMapping("/allCars")
     public List<Car> getAllCars(){
         return service.getCars();
     }
 
-//    @GetMapping
-//    public String getCarDetails(@RequestBody Car car){
-//        return service.getDetails(car);
-//    }
+    @GetMapping("/carDetails")
+    public String getCarDetails(@RequestBody Car car){
+        return service.getDetails(car);
+    }
 }
