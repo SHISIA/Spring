@@ -12,13 +12,14 @@ public class CarDataAccess implements CarImpl{
     private static List<Car> carList=new ArrayList<>();
 
     @Override
-    public String carDetails(Car car) {
-        return "Car: "+car.getCarName()+" Brand: "+car.getCarBrand()+" Year: "+car.getYear();
+    public String carDetails(String name) {
+      Car found= carList.stream().filter(car -> name.equals(car.getCarName())).findFirst().orElse(null);
+        return "Car: "+found.getCarName()+" Brand: "+found.getCarBrand()+" Year: "+found.getYear();
     }
 
     @Override
-    public boolean deleteCar(Car car) {
-        carList.remove(car);
+    public boolean deleteCar(String  car) {
+        carList.remove(carList.stream().filter(car1 -> car.equals(car1.getCarName())).findFirst().orElse(null));
         return true;
     }
 

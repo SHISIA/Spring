@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface CarImpl {
 
-     String carDetails(Car car);
+     String carDetails(String name);
 
-    boolean deleteCar(Car car);
+    boolean deleteCar(String car);
 
     List<Car> getAllCars();
 
