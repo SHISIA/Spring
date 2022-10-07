@@ -24,7 +24,8 @@ public class CarController {
          service.addCar(car);
     }
 
-   @DeleteMapping
+    //works well
+   @DeleteMapping(path = "{name}")
     public boolean deleteCar(@PathVariable("name") String name){
         return service.deleteCar(name);
     }
@@ -45,8 +46,9 @@ public class CarController {
         return service.getCars();
     }
 
+    //works well
     @GetMapping("{name}")
-    public String getCarDetails(@PathVariable String name){
+    public String getCarDetails(@PathVariable("name") String name){
         return service.getDetails(name);
     }
 }
