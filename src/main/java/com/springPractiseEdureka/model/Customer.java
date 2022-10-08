@@ -1,5 +1,6 @@
 package com.springPractiseEdureka.model;
 
+import com.springPractiseEdureka.controller.Technologies;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
@@ -7,13 +8,15 @@ import java.util.UUID;
 @Component
 public class Customer {
 
-    private UUID custId;
     private String cusName;
     private String courseName;
+    private final Technologies technologies;
 
+    public Customer( Technologies technologies) {
+        this.technologies = technologies;
+    }
 
     public void setCustId(UUID custId) {
-        this.custId = custId;
     }
 
     public void setCusName(String cusName) {
@@ -37,6 +40,7 @@ public class Customer {
     }
 
     public void display() {
-        System.out.println("Customer "+getCusName()+" has taken course "+getCourseName()+" of ID: "+getCustId()+" successfully.");
+        technologies.techDetails();
+        System.out.println("\nCustomer "+getCusName()+" has taken course "+getCourseName()+" of ID: "+getCustId()+" successfully.");
     }
 }
