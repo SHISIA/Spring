@@ -30,9 +30,9 @@ public class CarController {
         return service.deleteCar(name);
     }
 
+    //changed the logic in @CarDataAccess and worked
     @GetMapping(path = "{carName}")
     public List<Car> findCarByName(@PathVariable("carName") String carName){
-        System.out.println("kjhvgvc");
         return service.findCarByName(carName);
     }
 

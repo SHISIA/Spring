@@ -30,7 +30,13 @@ public class CarDataAccess implements CarImpl{
 
     @Override
     public List<Car> getCarByName(String carName) {
-        return carList.stream().filter(car -> carName.equals(car.getYear())).collect(Collectors.toList());
+        List<Car> cars=new ArrayList<>();
+        for (Car car:carList){
+            if (car.getCarName().toLowerCase().matches(carName.toLowerCase())){
+                cars.add(car);
+            }
+        }
+        return cars;
     }
 
     @Override
