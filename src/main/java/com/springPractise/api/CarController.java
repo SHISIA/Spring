@@ -49,8 +49,9 @@ public class CarController {
     }
 
     //works well
-//    @GetMapping("{name}")
-//    public String getCarDetails(@PathVariable("name") String name){
-//        return service.getDetails(name);
-//    }
+    @RequestMapping(path = "/details/{name}",method = RequestMethod.POST)
+    @ResponseBody
+    public String getCarDetails(@PathVariable String name){
+        return service.getDetails(name);
+    }
 }
