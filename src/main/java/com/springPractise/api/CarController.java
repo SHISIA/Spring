@@ -30,13 +30,14 @@ public class CarController {
         return service.deleteCar(name);
     }
 
-//    @GetMapping("{carName}")
-//    public List<Car> findCarByName(@PathVariable String carName){
-//        return service.findCarByName(carName);
-//    }
-//
+    @GetMapping(path = "{carName}")
+    public List<Car> findCarByName(@PathVariable("carName") String carName){
+        System.out.println("kjhvgvc");
+        return service.findCarByName(carName);
+    }
+
 //    @GetMapping("{year}")
-//    public List<Car> findCarByYear(@PathVariable String year){
+//    public List<Car> findCarByYear(@PathVariable("year") int year){
 //        return service.findCarByYear(year);
 //    }
 
@@ -47,8 +48,8 @@ public class CarController {
     }
 
     //works well
-    @GetMapping("{name}")
-    public String getCarDetails(@PathVariable("name") String name){
-        return service.getDetails(name);
-    }
+//    @GetMapping("{name}")
+//    public String getCarDetails(@PathVariable("name") String name){
+//        return service.getDetails(name);
+//    }
 }

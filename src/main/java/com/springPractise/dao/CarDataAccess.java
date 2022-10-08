@@ -34,9 +34,9 @@ public class CarDataAccess implements CarImpl{
     }
 
     @Override
-    public List<Car> getCarsByYear(String year) {
+    public List<Car> getCarsByYear(int year) {
         List<Car> cars=new ArrayList<>();
-        cars.add(new Car("Mimi","sdv","ddd"));
+        cars.add(new Car("Mimi","sdv",2021));
         return cars;
     }
 

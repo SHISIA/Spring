@@ -14,7 +14,7 @@ public interface CarImpl {
 
     List<Car> getCarByName(String carName);
 
-    List<Car> getCarsByYear(String year);
+    List<Car> getCarsByYear(int year);
 
     String addCar(Car car);
 

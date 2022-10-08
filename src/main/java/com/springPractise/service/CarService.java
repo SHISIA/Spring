@@ -30,7 +30,7 @@ public class CarService {
         return carDao.getAllCars();
     }
 
-    public List<Car> findCarByYear(String year){
+    public List<Car> findCarByYear(int year){
         return carDao.getCarsByYear(year);
     }
 
