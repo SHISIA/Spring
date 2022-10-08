@@ -36,10 +36,11 @@ public class CarController {
         return service.findCarByName(carName);
     }
 
-//    @GetMapping("{year}")
-//    public List<Car> findCarByYear(@PathVariable("year") int year){
-//        return service.findCarByYear(year);
-//    }
+    //Method also works well
+    @PostMapping(path = "{year}")
+    public List<Car> findCarByYear(@PathVariable("year") int year){
+        return service.findCarByYear(year);
+    }
 
     //works well
     @GetMapping
