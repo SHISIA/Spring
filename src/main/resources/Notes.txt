@@ -9,3 +9,5 @@ application database" part because I intend to take it as a topic/concept on its
 Third tutorial, Link : https://youtu.be/hvk4fUHFKNM 2. Spring Boot Project with JSP in Intellij (Completed) N/B: I fell into errors
 while connecting the web app to the jsp file because the Edureka tutorial was based on Eclipse IDE so I hadto seek external help from
 this third tutorial.
+
+#Part One complete with Unresolved errors. Part Two Majors on topics as they come

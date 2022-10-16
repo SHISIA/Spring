@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Customers</title>
-  <link rel="icon" rel = "icon" href =
+  <link rel="icon" href =
         "/resources/images/img.png"
                           type="icon/logo">
 </head>
