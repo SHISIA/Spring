@@ -18,13 +18,13 @@ public class CoursesController {
         return "Courses";
     }
 
-    //Getting the parameters from  the web via the jsp file
+    //Getting the parameters from  the web via the jsp file(Method one)
     @RequestMapping("/person")
-    public String _courses(HttpServletRequest request){
+    public String _courses(String person,HttpServletRequest request){
         HttpSession session=request.getSession();
-        String cname=request.getParameter("cname");
-        session.setAttribute("cname",cname);
-        System.out.println("Person is "+cname);
+//       String cname=request.getParameter("cname");
+        session.setAttribute("cname",person);
+        System.out.println("Person is "+person);
         return "Person";
     }
 
