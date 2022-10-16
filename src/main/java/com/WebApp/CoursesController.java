@@ -3,6 +3,7 @@ package com.WebApp;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +21,8 @@ public class CoursesController {
 
     //Getting the parameters from  the web via the jsp file(Method one)
     @RequestMapping("/person")
-    public String _courses(String person,HttpServletRequest request){
+    //cname from url is parsed into person and mapped
+    public String _courses(@RequestParam("cname") String person, HttpServletRequest request){
         HttpSession session=request.getSession();
 //       String cname=request.getParameter("cname");
         session.setAttribute("cname",person);
