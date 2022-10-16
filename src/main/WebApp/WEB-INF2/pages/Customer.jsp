@@ -5,11 +5,11 @@
     <title>Kenyan Customers</title>
 </head>
 <body>
-<form action="addCustomers">
-    <input type="text" name="cid"><br>
-    <input type="text" name="cname"><br>
-    <input type="text" name="cemail"><br>
-    <input type="submit"><br>
+<form method="post" action="addCustomers">
+   Enter Customer ID <input type="text" name="cid"><br>
+   Enter Customer Name <input type="text" name="cname"><br>
+   Enter Customer Email<input type="email" name="cemail"><br>
+    <input type="submit" value="Submit"><br>
 </form>
 </body>
 </html>
