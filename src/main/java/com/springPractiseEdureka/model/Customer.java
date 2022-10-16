@@ -1,6 +1,7 @@
 package com.springPractiseEdureka.model;
 
 import com.springPractiseEdureka.controller.Technologies;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
@@ -10,10 +11,10 @@ public class Customer {
 
     private String cusName;
     private String courseName;
-    private final Technologies technologies;
-
-    public Customer( Technologies technologies) {
-        this.technologies = technologies;
+    @Autowired
+    private  Technologies technologies;
+    public Technologies getTechnologies() {
+        return technologies;
     }
 
     public void setCustId(UUID custId) {
@@ -40,6 +41,8 @@ public class Customer {
     }
 
     public void display() {
+        technologies.setTechName("Software Engineering");
+        technologies.setTechId(UUID.randomUUID());
         technologies.techDetails();
         System.out.println("\nCustomer "+getCusName()+" has taken course "+getCourseName()+" of ID: "+getCustId()+" successfully.");
     }

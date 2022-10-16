@@ -26,6 +26,6 @@ public class Technologies {
     }
 
     public void techDetails(){
-        System.out.println("Technology set currently to "+getTechName()+"("+getTechId()+").");
+        System.out.println("\nTechnology set currently to "+getTechName()+"("+getTechId()+").");
     }
 }
