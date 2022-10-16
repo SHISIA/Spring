@@ -8,5 +8,11 @@
             type = "image/x-icon">
 </head>
 <body>
+<h1>Spring Boot Application</h1>
+<hr>
+    <p style="color:green">
+    This is the First Web Application I made in Spring, and it worked.<br>
+    The First after watching a tutorial from :<ul><li><b>Edureka</b></li><li><b> Amigoscode</b></li></ul>
+    </p>
 </body>
 </html>
