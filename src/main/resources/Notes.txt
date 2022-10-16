@@ -1,5 +1,11 @@
 
-N/B : These tutorials were watched 3x(Three Times each, by me of course):
+N/B : These tutorials were watched 3x(Three Times each :I watched them ,of course):
 
 First Tutorial , Link : https://youtu.be/vtPkZShrvXQ : Freecodecamp by Amigoscode (Completed)
-Second Tutorial , Link: https://youtu.be/UfOxcrxhC0s : Course by Edureka (Completed)
+
+Second Tutorial , Link: https://youtu.be/UfOxcrxhC0s : Course by Edureka (Completed) N/B I skipped the "connecting the a web
+application database" part because I intend to take it as a topic/concept on its own entirety.
+
+Third tutorial, Link : https://youtu.be/hvk4fUHFKNM 2. Spring Boot Project with JSP in Intellij (Completed) N/B: I fell into errors
+while connecting the web app to the jsp file because the Edureka tutorial was based on Eclipse IDE so I hadto seek external help from
+this third tutorial.
